@@ -1,0 +1,7 @@
+.soulSection col{
+  filter: blur(0);
+}
+
+.soulSection{
+  min-height: 55rem;
+}
