@@ -8,11 +8,12 @@ import { Fragment } from 'react';
 const Soul1 = () => {
     gsap.registerPlugin(MotionPathPlugin);
     gsap.to(".soul1", {
-        width:200,
-        duration: 15,
-        scrollTrigger: "#soul1",
+        width:180,
+        duration: 20,
+        scrollTrigger: "#firstSec",
         repeat: 0,
-        repeatDelay: 1000000000,
+        opacity: 0.2,
+        repeatDelay: 1,
         immediateRender: true,
         yoyo: true,
         ease: "power1.inOut",
@@ -24,7 +25,7 @@ const Soul1 = () => {
         }
       });
     return( 
-        <Fragment >
+        <Fragment>
             <svg id="svg" width="1464" height="295" viewBox="0 0 1464 295" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path id="path1" d="M1463.47 121.822C988.343 587.188 487.07 -42.8592 0.226328 3.17693" stroke="black"/>
             </svg>

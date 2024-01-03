@@ -1,7 +1,17 @@
-.soulSection col{
-  filter: blur(0);
-}
 
 .soulSection{
-  min-height: 55rem;
+  position: relative;
+  min-height: 110%;
+}
+.soulCol{
+  filter: blur(2px);
+}
+#path1, #path2, #path3, #path4{
+  opacity: 0 !important;
+}
+.contCol{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }

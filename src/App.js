@@ -27,77 +27,49 @@ function App() {
         effects: true
       });
       ScrollTrigger.create({
-        start: 'center center',
+        start: 'bottom bottom',
         markers: true
       });
     },
     { scope: main }
   );
-
-  // useGSAP(
-  //   () => {
-  //     smoother.current = ScrollSmoother.create({
-  //       smooth: 1, 
-  //       effects: true
-  //     });
-  //     ScrollTrigger.create({
-  //       trigger: '#soul2',
-  //       start: 'center center',
-  //       markers: true
-  //     });
-  //   },
-  //   { scope: main }
-  // );
-  
-  // useGSAP(
-  //   () => {
-  //     smoother.current = ScrollSmoother.create({
-  //         smooth: 2, 
-  //         effects: true
-  //       });
-  //       ScrollTrigger.create({
-  //         trigger: '#soul3',
-  //         start: 'center center',
-  //         markers: true
-  //       });
-  //     },
-  //     { scope: main }
-  //   );
-    
-    // useGSAP(
-    //   () => {
-    //     smoother.current = ScrollSmoother.create({
-    //       smooth: 2, 
-    //       effects: true
-    //     });
-    //     ScrollTrigger.create({
-    //       trigger: '#soul4',
-    //       pin: true,
-    //       start: 'center center',
-    //       end: '+=200',
-    //       markers: true
-    //     });
-    //   },
-    //   { scope: main }
-    // );
-    return(
-            <Container id='smooth-wrapper' ref={main} fluid>
-                <div id='smooth-content'>
-                    <Row className='soulSection' id='firstSec'>
-                        <Col data-speed="1.5"><Soul1/></Col>
-                    </Row>
-                    <Row className='soulSection' id='thirdSec'>
-                        <Col data-speed="1.5"><Soul3/></Col>
-                    </Row>
-                    <Row className='soulSection' id='secondSec'>
-                        <Col data-speed="1.5"><Soul2/></Col>
-                    </Row>
-                    <Row className='soulSection' id='forthSec'>
-                        <Col data-speed="1.5"><Soul4/></Col>
-                    </Row>
-                </div>
-            </Container>
-    );
+  return(
+    <Container id='smooth-wrapper' ref={main} fluid>
+      <div id='smooth-content'>
+        <Row className='soulSection' id='firstSec'>
+          <Col className='contSection justify-content-center'>
+            <div className='soulCol'><Soul1/></div>
+            <div className='contCol'>
+              <h1>First</h1>
+            </div>
+          </Col>
+        </Row>
+        <Row className='soulSection' id='secondSec'>
+          <Col className='contSection'>
+            <div className='soulCol'><Soul2/></div>
+            <div className='contCol' >
+              <h1 >Second</h1>
+            </div>
+          </Col>
+        </Row>
+        <Row className='soulSection' id='thirdSec'>
+          <Col className='contSection'>
+            <div className='soulCol'><Soul3/></div>
+            <div className='contCol'>
+              <h1 >Third</h1>
+            </div>
+          </Col>
+        </Row>
+        <Row className='soulSection' id='forthSec'>
+          <Col className='contSection'>
+            <div className='soulCol'><Soul4/></div>
+            <div className='contCol'>
+              <h1 >Forth</h1>
+            </div>
+          </Col>
+        </Row>
+      </div>
+    </Container>
+  );
 }
-
 export default App;

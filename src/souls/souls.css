@@ -1,7 +1,6 @@
-.svgBlock{
+
+#svg path{
+    width: 120%;
+    align-items: center;
     display: block; margin: auto;
-}
-svg{
-    opacity: 0.2;
-    padding: 0;
 }

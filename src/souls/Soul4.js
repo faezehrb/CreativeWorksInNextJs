@@ -10,14 +10,16 @@ const Soul4 = () => {
     gsap.fromTo(".soul4",{
         width:100,
         opacity: 0,
-        repeat: 0
-    }, {
-        width:250,
-        duration: 7,
-        opacity: 0.2,
-        scrollTrigger: "#soul4",
         repeat: 0,
-        x: 200,
+        x:950
+    }, {
+        width:200,
+        duration: 20,
+        opacity: 0.4,
+        scrollTrigger: "#forthSec",
+        repeat: 0,
+        x: 1000,
+        y: 200,
         repeatDelay: 1000000000,
         immediateRender: true,
         yoyo: true,
@@ -30,7 +32,7 @@ const Soul4 = () => {
         // }
       });
     return( 
-        <Fragment >
+        <Fragment>
             {/* <svg id="svg" width="1636" height="368" viewBox="0 0 1636 368" fill="none">
                 <path id="path4" d="M1635.36 131.762C1411.77 711.859 410.508 39.7069 0.999975 0.999986" stroke="black"/>
             </svg> */}
