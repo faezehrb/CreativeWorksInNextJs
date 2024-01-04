@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 //import { Fragment } from 'react';
 // import './scroll/scroll';
 import './App.css';
+import NightSky from '../src/appearance/NightSky';
 import { ScrollTrigger } from 'gsap-trial/ScrollTrigger';
 import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
 import Soul1 from './souls/Soul1';
@@ -23,7 +24,7 @@ function App() {
   useGSAP(
     () => {
       smoother.current = ScrollSmoother.create({
-        smooth: 4, 
+        smooth: 0.4, 
         effects: true
       });
       ScrollTrigger.create({
@@ -35,9 +36,10 @@ function App() {
   );
   return(
     <Container id='smooth-wrapper' ref={main} fluid>
+      <NightSky />
       <div id='smooth-content'>
         <Row className='soulSection' id='firstSec'>
-          <Col className='contSection justify-content-center'>
+          <Col className='contSection'>
             <div className='soulCol'><Soul1/></div>
             <div className='contCol'>
               <h1>First</h1>

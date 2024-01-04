@@ -1,0 +1,40 @@
+/* NightSky.css */
+
+body {
+    position: relative;
+    min-height: 100%; /* Ensure the body expands across all sections */
+  }
+  
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 5s infinite, moveStar 60s infinite; /* Very slow motion */
+  }
+  
+  @keyframes twinkle {
+    0% {
+        opacity: 0;
+      }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+      }
+  }
+  
+  @keyframes moveStar {
+    0% {
+      transform: translate(-10vw, -10vh);
+    }
+    50% {
+      transform: translate(10vw, 20vh);
+    }
+    100% {
+      transform: translate(-10vw, -10vh);
+    }
+  }
+  

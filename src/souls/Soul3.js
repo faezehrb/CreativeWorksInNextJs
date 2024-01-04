@@ -8,15 +8,15 @@ import { Fragment } from 'react';
 
 const Soul3 = () => {
     gsap.registerPlugin(MotionPathPlugin);
-    gsap.fromTo(".soul3", {
+    gsap.fromTo("#soul3", {
         opacity: 0
     },{
-        width:180,
+        width:70,
         scrollTrigger: "#thirdSec",
-        duration: 20, 
-        repeat: 0,
+        duration: 17, 
+        repeat: -1,
         opacity: 0.5,
-        repeatDelay: 10000000,
+        repeatDelay: 1,
         yoyo: true,
         ease: "power1.inOut",
         motionPath:{
@@ -28,7 +28,7 @@ const Soul3 = () => {
       });
     return( 
         <Fragment>
-            <svg id="svg" width="1381" height="715" viewBox="0 0 1381 715" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="svg" className='soul3' width="1381" height="715" viewBox="0 0 1381 715" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path id="path3" d="M1380 0C1380.99 521.702 385.842 747.062 1 710.107" stroke="black"/>
             </svg>
             <svg id='soul3' className='soul3' width="150"  viewBox="0 0 491 488" fill="none">

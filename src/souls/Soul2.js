@@ -7,14 +7,14 @@ import './souls.css';
 
 const Soul2 = () => {
     gsap.registerPlugin(MotionPathPlugin);
-    gsap.to(".soul2",{
-        width:180,
+    gsap.to("#soul2",{
+        width: 70,
         duration: 20,
         scrollTrigger: "#secondSec",
         opacity: 0.2,
-        repeat: 0,
-        y: 2000,
-        repeatDelay: 10000000,
+        repeat: -1,
+        y: -2000,
+        repeatDelay: 1,
         yoyo: true,
         ease: "power1.inOut",
         motionPath:{
@@ -28,8 +28,8 @@ const Soul2 = () => {
       });
     return( 
         <Fragment>
-            <svg id="svg" width="1720" height="172" viewBox="0 0 1720 172" fill="none">
-                <path id="path2" d="M1718.81 15.9769C1049 488.5 852 -311.5 1.25185 149.61" stroke="black" stroke-linecap="round"/>
+            <svg id="svg" className='soul2' width="1720" height="172" viewBox="0 0 1720 172" fill="none">
+                <path id="path2" d="M1718.81 15.9769C1049 488.5 852 -311.5 1.25185 149.61" stroke="black" strokeLinecap="round"/>
             </svg>
             <svg id="soul2" className='soul2' width="430" height="335" viewBox="0 0 430 335" fill="none">
                 <g clipPath="url(#clip0_14_72)">

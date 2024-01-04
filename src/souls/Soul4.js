@@ -7,20 +7,19 @@ import { Fragment } from 'react';
 
 const Soul4 = () => {
     gsap.registerPlugin(MotionPathPlugin);
-    gsap.fromTo(".soul4",{
-        width:100,
+    gsap.fromTo("#soul4",{
+        width:70,
         opacity: 0,
-        repeat: 0,
         x:950
     }, {
         width:200,
-        duration: 20,
+        duration: 15,
         opacity: 0.4,
+        repeat: -1,
+        repeatDelay: 1,
         scrollTrigger: "#forthSec",
-        repeat: 0,
         x: 1000,
         y: 200,
-        repeatDelay: 1000000000,
         immediateRender: true,
         yoyo: true,
         ease: "power1.inOut"

@@ -7,8 +7,8 @@ import { Fragment } from 'react';
 
 const Soul1 = () => {
     gsap.registerPlugin(MotionPathPlugin);
-    gsap.to(".soul1", {
-        width:180,
+    gsap.to("#soul1", {
+        width: 70,
         duration: 20,
         scrollTrigger: "#firstSec",
         repeat: 0,
@@ -26,7 +26,7 @@ const Soul1 = () => {
       });
     return( 
         <Fragment>
-            <svg id="svg" width="1464" height="295" viewBox="0 0 1464 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="svg" className='soul1' width="1464" height="295" viewBox="0 0 1464 295" fill="none">
                 <path id="path1" d="M1463.47 121.822C988.343 587.188 487.07 -42.8592 0.226328 3.17693" stroke="black"/>
             </svg>
             <svg id="soul1" className='soul1' width="400" height="370" viewBox="0 0 400 370" fill="none">
@@ -91,6 +91,9 @@ const Soul1 = () => {
                 <path d="M175.1 142.9C174.5 142.3 173.4 142.2 172.7 142.6C172 143 171.5 143.6 171.3 144.3C171.1 144.4 171 144.5 170.9 144.7C169.5 147.3 170 150.8 172.2 152.9C173 153.6 174.3 153.7 175.1 152.9C177.5 150 177.5 145.8 175.1 142.9Z" fill="#494949"/>
                 </g>
             </svg>
+            <svg version="1.2" viewBox="0 0 1200 400" width="1200" height="400">
+            <use id="Layer 1" href="#img1" x="26" y="89"/>
+        </svg>
         </Fragment>
     )
 }
