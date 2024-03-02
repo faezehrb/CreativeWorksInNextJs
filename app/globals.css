@@ -18,12 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(92, 91, 91)) rgb(var(--background-start-rgb));
   overflow-x: hidden;
   position: relative;
 }
@@ -34,10 +29,6 @@ body {
   background-color: #fff;
   border-radius: 50%;
   animation: twinkle 5s infinite, moveStar 60s infinite; /* Very slow motion */
-}
-.bigBg{
-  background: rgb(198,0,167);
-  background: linear-gradient(90deg, rgba(198,0,167,0.09989933473389356) 0%, rgba(78,132,143,0.28197216386554624) 100%);
 }
 @keyframes twinkle {
   0% {

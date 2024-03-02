@@ -22,7 +22,7 @@ function App() {
    useGSAP(
      () => {
        smoother.current = ScrollSmoother.create({
-         smooth: 0.9, 
+         smooth: 0.8, 
          effects: true
        });
        ScrollTrigger.create({
