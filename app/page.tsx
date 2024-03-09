@@ -4,13 +4,14 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap-trial/ScrollTrigger';
 import { ScrollSmoother } from 'gsap-trial/ScrollSmoother';
 import { useGSAP } from '@gsap/react';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import NightSky from '../appearance/nightskystar';
 import First from '../components/sections/first';
 import Second from '../components/sections/second';
 import Third from '../components/sections/third';
 import Forth from '../components/sections/forth';
-import { tree } from 'next/dist/build/templates/app-page';
+import HamburgerMenu from '../components/navbar/hamburgerMenu'
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -18,6 +19,11 @@ function App() {
 
   const main: any = useRef(); 
   const smoother: any = useRef();
+  const [ darkMode, setDarkMode ] = useState<boolean>(false);
+
+  const handleClick = () => {
+    setDarkMode(!darkMode)
+  };
  
    useGSAP(
      () => {
@@ -35,12 +41,15 @@ function App() {
 
   return(
     <>
-      <div id='smooth-wrapper'  ref={main}>
-        <div id='smooth-content'>
-            <section className='relative w-screen h-screen' id='firstSec'>
-              <First />
+        <section className='fixed top-0 w-full z-50'>
+          <HamburgerMenu/>
+        </section>
+        <div id='smooth-wrapper'  ref={main}>
+        <div className={`${darkMode ? 'night' : 'morning'}`} id='smooth-content' >
+            <section className='relative w-screen h-screen' id='firstSec'></div>‍‍
+              <First />     ‍‍‍
             </section>
-            <section className='relative w-screen h-screen' id='secondSec'>
+            <section className='relative w-screen h-screen' id='secondSec'>""
               <Second />
             </section>
             <section className='relative w-screen h-screen' id='thirdSec'>
