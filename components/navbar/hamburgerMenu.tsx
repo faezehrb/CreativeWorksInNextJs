@@ -1,4 +1,5 @@
 // components/HamburgerMenu.tsx
+import { useAppContext } from '@/app/context';
 import React, { useState } from 'react';
 
 const HamburgerMenu: React.FC = () => {
@@ -13,6 +14,7 @@ const HamburgerMenu: React.FC = () => {
       setClicked(false);
     }, 500);
   };
+  const { nightMode, setNightMode } = useAppContext()
   return (
     <div className="relative inline-block text-left">
       <div className='z-50'>
@@ -20,7 +22,7 @@ const HamburgerMenu: React.FC = () => {
           type="button"
           className="inline-flex justify-center m-8 w-12 h-12 p-2 text-white-800 transition transform border border-transparent hover:text-white-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-white-500 hover:scale-125 focus-visible:ring-opacity-50"
           aria-expanded = {isOpen ? 'true' : 'false'}
-          onClick={handleClick}
+          onClick={() => setNightMode(!nightMode)}
         >
           <svg
             className={`w-6 h-6 ${isOpen ? 'hidden' : 'block'} text-white`}
@@ -75,6 +77,9 @@ const HamburgerMenu: React.FC = () => {
                   href="#"
                   className= "rounded-full flex justify-center items-center text-white-800 transform transition-all "
                   role="menuitem"
+                  onClick={() => {
+
+                  }}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-[1.6rem] h-[1.6rem] text-white transform transition-all hover:scale-125">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />

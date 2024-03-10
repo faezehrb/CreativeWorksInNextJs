@@ -764,11 +764,13 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-#smooth-content{
+#smooth-content.morningMode{
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(28, 0, 62)) rgb(var(--background-start-rgb));
-  /* background: rgb(203,182,176);
-  background: linear-gradient(0deg, rgba(203,182,176,1) 0%, rgba(115,193,235,1) 100%); */
+  background: linear-gradient(to bottom, transparent, rgb(28, 0, 62)) rgb(var(--background-start-rgb)) !important;
+}
+#smooth-content.nighMode{
+  background: rgb(203,182,176);
+  background: linear-gradient(0deg, rgba(203,182,176,1) 0%, rgba(115,193,235,1) 100%) !important;
 }
 .star {
   position: absolute;

@@ -11,6 +11,7 @@ import Second from '../components/sections/second';
 import Third from '../components/sections/third';
 import Forth from '../components/sections/forth';
 import HamburgerMenu from '../components/navbar/hamburgerMenu'
+import { useAppContext } from './context';
 
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -19,6 +20,7 @@ function App() {
 
   const main: any = useRef(); 
   const smoother: any = useRef();
+
   const [ darkMode, setDarkMode ] = useState<boolean>(false);
 
   const handleClick = () => {
@@ -39,27 +41,29 @@ function App() {
      { scope: main }
    );
 
+  const { nightMode, setNightMode } = useAppContext() 
+
   return(
     <>
         <section className='fixed top-0 w-full z-50'>
           <HamburgerMenu/>
         </section>
         <div id='smooth-wrapper'  ref={main}>
-        <div className={`${darkMode ? 'night' : 'morning'}`} id='smooth-content' >
-            <section className='relative w-screen h-screen' id='firstSec'></div>‍‍
-              <First />     ‍‍‍
-            </section>
-            <section className='relative w-screen h-screen' id='secondSec'>""
-              <Second />
-            </section>
-            <section className='relative w-screen h-screen' id='thirdSec'>
-              <Third />
-            </section>
-            <section className='relative w-screen h-screen' id='forthSec'>
-              <Forth />
-            </section>
+          <div className ={`${nightMode ? 'nighMode' : 'morningMode'}`} id='smooth-content' >
+              <section className='relative w-screen h-screen' id='firstSec'>
+                <First />
+              </section>
+              <section className='relative w-screen h-screen' id='secondSec'>""
+                <Second />
+              </section>
+              <section className='relative w-screen h-screen' id='thirdSec'>
+                <Third />
+              </section>
+              <section className='relative w-screen h-screen' id='forthSec'>
+                <Forth />
+              </section>
+          </div>
         </div>
-      </div>
       <NightSky />
     </>
   );
