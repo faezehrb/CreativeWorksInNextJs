@@ -1,11 +1,11 @@
-'use-client'
+'use client'
 import React, { createContext, useContext, useState } from "react";
 
 const AppContext = createContext<any>(undefined)
 
 export function AppWrapper({children} : { children: React.ReactNode }){
 
-    let [ nightMode, setNightMode ] = useState<boolean>(false)
+    let [ nightMode, setNightMode ] = useState<boolean>(true)
 
     return (
         <AppContext.Provider  value = {{ nightMode, setNightMode }}>
