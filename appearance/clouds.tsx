@@ -1,20 +1,34 @@
-// components/Clouds.tsx
-import React from 'react';
-import Cloud from './cloud';
 
-const Clouds: React.FC = () => {
-  
+import Cloud1 from '../components/svg/cloud1'
+
+
+interface CloudProps {
+  left: number
+  top: number
+}
+
+const Clouds: React.FC<CloudProps> = ({ left, top }) => {
+  const duration = Math.random() * 2 + 5
+  const cloudStyle = {
+    left: `${left}px`,
+    animation: `twinkle ${duration}s infinite, moveStar 60s infinite`,
+    top: `${top}px`,
+  }
+
+  return <div className="cloud" style={cloudStyle}><Cloud1 /></div>
+}
+const CloudContainer: React.FC = () => {
+  const clouds = Array.from({ length: 4 }).map(() => ({
+    left: Math.random() * window.innerWidth,
+    top: Math.random() * window.innerHeight,
+  }));
+
   return (
-    <>
-      <div className="absolute top-0 left-0 z-0 w-full h-full">
-        {/* Render four instances of Cloud */}
-        {[...Array(4)].map((_, index) => (
-          <Cloud key={index} />
-        ))}
-      </div>
-      <div className="absolute bottom-0 left-0 z-10 bg-gradient-to-t from-blue-400 to-transparent w-full h-20"></div>
-    </>
+    <div className="absolute top-0 left-0 z-0 w-full h-full">
+      {clouds.map((cloud, index) => (
+        <Clouds key={index} left={cloud.left} top={cloud.top} />
+      ))}
+    </div>
   );
-};
-
-export default Clouds;
+}
+export default CloudContainer

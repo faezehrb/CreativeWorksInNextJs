@@ -1,24 +1,24 @@
 "use client";
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
-import { ScrollSmoother } from "gsap-trial/ScrollSmoother";
-import { useGSAP } from "@gsap/react";
-import React, { Component, FC, useRef, useState } from "react";
-import NightSky from "../appearance/nightskystar";
-import First from "../components/sections/first";
-import Second from "../components/sections/second";
-import Third from "../components/sections/third";
-import Forth from "../components/sections/forth";
-import HamburgerMenu from "../components/navbar/hamburgerMenu";
-import { useAppContext } from "./context";
-import Clouds from "@/appearance/clouds";
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap-trial/ScrollTrigger"
+import { ScrollSmoother } from "gsap-trial/ScrollSmoother"
+import { useGSAP } from "@gsap/react"
+import React, { Component, FC, useRef, useState } from "react"
+import NightSky from "../appearance/nightSky"
+import First from "../components/sections/first"
+import Second from "../components/sections/second"
+import Third from "../components/sections/third"
+import Forth from "../components/sections/forth"
+import HamburgerMenu from "../components/navbar/hamburgerMenu"
+import { useAppContext } from "./context"
+import CloudContainer from "@/appearance/clouds"
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 function App() {
-  const main: any = useRef();
-  const smoother: any = useRef();
+  const main: any = useRef()
+  const smoother: any = useRef()
 
   useGSAP(
     () => {
@@ -32,9 +32,9 @@ function App() {
       });
     },
     { scope: main }
-  );
+  )
 
-  const { nightMode, setNightMode } = useAppContext();
+  const { nightMode, setNightMode } = useAppContext()
 
   return (
     <>
@@ -59,7 +59,7 @@ function App() {
           </section>
         </div>
       </div>
-      {nightMode ? <NightSky /> : <Clouds />}
+      {nightMode ? <NightSky /> : <CloudContainer/>}
     </>
   );
 }

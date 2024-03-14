@@ -12,7 +12,7 @@ const useForthSoulRender = () =>{
             x:990
         }, {
             width:100,
-            duration: 10,
+            duration: 5,
             opacity: 0.4,
             repeat: -1,
             repeatDelay: 1,

@@ -9,7 +9,7 @@ const useSecondSoulRender = () =>{
         opacity: 0
     },{
         width: 150,
-        duration: 20,
+        duration: 10,
         scrollTrigger: "#secondSec",
         opacity: 0.7,
         repeat: 0,

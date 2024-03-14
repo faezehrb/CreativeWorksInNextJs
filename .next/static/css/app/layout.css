@@ -537,11 +537,17 @@ video {
 .top-\[15rem\] {
   top: 15rem;
 }
+.bottom-0 {
+  bottom: 0px;
+}
 .z-20 {
   z-index: 20;
 }
 .z-50 {
   z-index: 50;
+}
+.z-0 {
+  z-index: 0;
 }
 .m-0 {
   margin: 0px;
@@ -767,10 +773,12 @@ body{
 #smooth-content.nightMode{
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(28, 0, 62)) rgb(var(--background-start-rgb)) !important;
+  transform: background 4s;
 }
 #smooth-content.morningMode{
   background: rgb(214,189,230);
   background: linear-gradient(0deg, rgba(214,189,230,1) 0%, rgba(115,206,235,1) 100%);
+  /* transition: background 1s; */
 }
 .star {
   position: absolute;
