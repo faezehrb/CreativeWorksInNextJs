@@ -53,4 +53,4 @@ const ThirdSoulSVG = () => {
         </>
     )
 }
-export default ThirdSoulSVG;
+export default ThirdSoulSVG

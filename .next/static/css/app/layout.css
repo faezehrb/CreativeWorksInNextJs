@@ -1,5 +1,5 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/globals.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/globals.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
 /*
 ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
@@ -600,6 +600,9 @@ video {
 .h-screen {
   height: 100vh;
 }
+.h-\[100vw\] {
+  height: 100vw;
+}
 .w-0 {
   width: 0px;
 }
@@ -625,6 +628,9 @@ video {
   width: 100%;
 }
 .w-screen {
+  width: 100vw;
+}
+.w-\[100vw\] {
   width: 100vw;
 }
 .origin-top-right {
@@ -770,6 +776,19 @@ body{
   position: relative;
   overflow-x: hidden;
 }
+
+.cloud-container {
+  animation: moveCloud 120s linear infinite; 
+}
+@keyframes moveCloud {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 #smooth-content.nightMode{
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(28, 0, 62)) rgb(var(--background-start-rgb)) !important;

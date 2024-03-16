@@ -19,6 +19,19 @@ body{
   position: relative;
   overflow-x: hidden;
 }
+
+.cloud-container {
+  animation: moveCloud 120s linear infinite; 
+}
+@keyframes moveCloud {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 #smooth-content.nightMode{
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(28, 0, 62)) rgb(var(--background-start-rgb)) !important;

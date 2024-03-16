@@ -259,6 +259,6 @@ const FirstSoulSVG = (): any => {
             </g>
             </svg>
         </>
-    );
-};
+    )
+}
 export default FirstSoulSVG;
