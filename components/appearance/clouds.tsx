@@ -10,11 +10,11 @@ interface CloudProps {
 }
 
 const Clouds: React.FC<CloudProps> = ({ left, top }) => {
-  
+
   const clouds = [Cloud1, Cloud2, Cloud3, Cloud4]
 
   return (
-    <div className="cloud-container absolute z-0" style={{ left: `${left}px`, top: `${top}px` }}>
+    <div className="cloud-container absolute -z-50" style = {{ left: `${left}px`, top: `${top}px` }}>
       {clouds.map((Cloud, i) => (
         <Cloud key={i} />
       ))}
@@ -23,14 +23,15 @@ const Clouds: React.FC<CloudProps> = ({ left, top }) => {
 }
 
 const CloudContainer: React.FC = () => {
+  const windowHeight = typeof window !== 'undefined' ? window.innerHeight : 0
+
   const clouds = Array.from({ length: 4 }).map(() => ({
     left: Math.random() * window.innerWidth + 200,
-    top: Math.random() * window.innerHeight,
-
+    top: Math.random() * windowHeight * 4,
   }))
 
   return (
-    <div className="clouds-container absolute z-0 top-0 left-0 w-[100vw] h-[100vw]">
+    <div className="clouds-container absolute z-0 top-0 blur-[2px] left-0 w-[100vw] h-[100vw]">
       {clouds.map((cloud, index) => (
         <Clouds key={index} left={cloud.left} top={cloud.top} />
       ))}

@@ -1,7 +1,8 @@
 
+import { useAppContext } from '@/components/context'
 import useForthSoulRender from '../../hook/useForthSoulRender'
 
-const ForthSoulSVG = () => {
+const ForthSoulSVGRturn = () => {
     const tl = useForthSoulRender()
     return( 
         <>
@@ -54,5 +55,16 @@ const ForthSoulSVG = () => {
         </>
     )
 }
-export default ForthSoulSVG;
+const ForthSoulSVG = (): any => {
+    const { nightMode } = useAppContext() 
+
+    if (nightMode) {
+        return <ForthSoulSVGRturn />
+      } else {
+        return null
+      }
+}
+
+
+export default ForthSoulSVG
 

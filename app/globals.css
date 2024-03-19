@@ -34,21 +34,24 @@ body{
 
 #smooth-content.nightMode{
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(28, 0, 62)) rgb(var(--background-start-rgb)) !important;
-  transform: background 4s;
+  background: linear-gradient(to bottom, transparent, rgb(28, 0, 62)) rgb(var(--background-start-rgb));
 }
 #smooth-content.morningMode{
-  background: rgb(214,189,230);
-  background: linear-gradient(0deg, rgba(214,189,230,1) 0%, rgba(115,206,235,1) 100%);
-  /* transition: background 1s; */
+  /* background: rgb(214,189,230);
+  background: linear-gradient(0deg, rgba(214,189,230,1) 0%, rgba(115,206,235,1) 100%); */
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(77, 139, 239, 1)) rgb( 115, 206, 235);
+  
+
 }
 .star {
   position: absolute;
-  width: 2px;
-  height: 2px;
-  background-color: #ffffff;
-  border-radius: 50%;
+  width: 0.1px;
+  height: 0.1px;
+  background: #fff;
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 1px 1px rgb(14, 207, 255);
   animation: twinkle 5s infinite, moveStar 60s infinite; /* Very slow motion */
+  transition: opacity var(--transition-duration) ease;
 }
 .header{
   background: linear-gradient(0deg, rgba(198,0,167,0) 0%, rgba(0,0,0,0.7987788865546218) 100%);

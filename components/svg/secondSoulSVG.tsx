@@ -1,7 +1,8 @@
 
+import { useAppContext } from "@/components/context"
 import useSecondSoulRender from '../../hook/useSecondSoulRender'
 
-const SecondSoulSVG = () => {
+const SecondSoulSVGReturn = () => {
     const tl = useSecondSoulRender()
     return( 
         <>
@@ -72,7 +73,17 @@ const SecondSoulSVG = () => {
         </>
     )
 }
-export default SecondSoulSVG;
+
+const SecondSoulSVG = (): any => {
+    const { nightMode } = useAppContext() 
+
+    if (nightMode) {
+        return <SecondSoulSVGReturn />
+      } else {
+        return null
+      }
+}
+export default SecondSoulSVG
 
 
 

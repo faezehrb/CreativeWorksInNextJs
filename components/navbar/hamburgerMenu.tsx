@@ -1,6 +1,6 @@
 'use client'
 
-import { useAppContext } from '@/app/context'
+import { useAppContext } from '@/components/context'
 import React, { useState } from 'react'
 
 const HamburgerMenu: React.FC = () => {
@@ -13,7 +13,7 @@ const HamburgerMenu: React.FC = () => {
 
     setTimeout(() => {
       setClicked(false)
-    }, 500)
+    }, 100)
   }
 
   const { nightMode, setNightMode } = useAppContext()

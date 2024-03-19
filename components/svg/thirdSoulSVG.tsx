@@ -1,7 +1,8 @@
 
 import useThirdSoulRender from '../../hook/useThirdSoulRender'
+import { useAppContext } from "@/components/context"
 
-const ThirdSoulSVG = () => {
+const ThirdSoulSVGReturn = () => {
     const tl = useThirdSoulRender()
     return( 
         <>
@@ -53,4 +54,15 @@ const ThirdSoulSVG = () => {
         </>
     )
 }
+
+const ThirdSoulSVG = (): any => {
+    const { nightMode } = useAppContext() 
+
+    if (nightMode) {
+        return <ThirdSoulSVGReturn />
+      } else {
+        return null
+      }
+}
+
 export default ThirdSoulSVG

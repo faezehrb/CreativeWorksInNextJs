@@ -3,7 +3,7 @@ import { useEffect } from "react"
 
 const NightSky: React.FC = () => {
   useEffect(() => {
-    const stars: number = 500
+    const stars: number = 300
     const body: HTMLElement | null = document.querySelector("body")
     if (!body) return
     for (let i = 0; i < stars; i++) {
@@ -25,4 +25,4 @@ const NightSky: React.FC = () => {
   return null
 }
 
-export default NightSky;
+export default NightSky
