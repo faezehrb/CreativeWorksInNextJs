@@ -1,6 +1,4 @@
 
-
-
 const Cloud1: React.FC = () => {
   return (
     <svg

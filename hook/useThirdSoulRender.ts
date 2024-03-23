@@ -1,11 +1,15 @@
 
+import { useAppContext } from "@/components/context";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin"
 import { useIsomorphicLayoutEffect } from "usehooks-ts"
 
 const useThirdSoulRender = () =>{
-    useIsomorphicLayoutEffect((): any => {
-        gsap.registerPlugin(MotionPathPlugin);
+  const { nightMode } = useAppContext()
+
+  useIsomorphicLayoutEffect(() => {
+    if (nightMode) {
+      gsap.registerPlugin(MotionPathPlugin)
        const tl = gsap.fromTo("#soul3", {
             duration: 22,
         },{
@@ -27,7 +31,8 @@ const useThirdSoulRender = () =>{
               alignOrigin: [0.5, 0.5]
             }
           })
-      }, [])
+        }
+      }, [nightMode])
 }
 
 export default useThirdSoulRender

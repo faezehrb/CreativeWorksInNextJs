@@ -1,3 +1,5 @@
+// tailwind.config.js
+
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,6 +10,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'madimione': ['Madimi One', 'sans-serif'],
+        'rubikscribble': ['Rubik Scribble', 'sans-serif'],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -17,4 +23,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

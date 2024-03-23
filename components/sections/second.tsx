@@ -1,11 +1,9 @@
 
 
-import { useAppContext } from "@/components/context"
 import SecondSoulSVG from "../svg/secondSoulSVG"
 
 
 const Second = () => {
-  const { nightMode, setNightMode } = useAppContext() 
   return (
     <>
       <div className='text-2xl text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-white'>

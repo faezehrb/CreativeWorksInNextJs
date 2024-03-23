@@ -1,11 +1,14 @@
 
+import { useAppContext } from "@/components/context";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin"
 import { useIsomorphicLayoutEffect } from "usehooks-ts"
 
 const useForthSoulRender = () =>{
+    const { nightMode } = useAppContext()
     useIsomorphicLayoutEffect((): any => {
-        gsap.registerPlugin(MotionPathPlugin);
+        if (nightMode) {
+            gsap.registerPlugin(MotionPathPlugin)
         gsap.fromTo("#soul4",{
             width:90,
             opacity: 0,
@@ -29,7 +32,8 @@ const useForthSoulRender = () =>{
             //   repeat: 0
             // }
           })
-      }, [])
+        }
+      }, [nightMode])
 }
 
 export default useForthSoulRender

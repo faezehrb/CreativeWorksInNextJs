@@ -7,12 +7,17 @@ const First = () => {
 
   return (
     <> 
-      <div className='text-2xl text-center absolute top-1/2 left-1/2  z-50 transform -translate-x-1/2 -translate-y-1/2 text-white'>
-        <p >Knowing these rules is not enough; you must enforce and abide by them too. It is easy to follow these rules when working alone on a project, but when working in a team or on an external project, it is a good idea to devise ways to check if these rules are followed to reduce the chance of introducing bugs into the code.</p>
-     
-      </div> 
-       <div className="absolute w-full h-full blur-2xl z-10"></div>
       <FirstSoulSVG /> 
+      <div className="container mx-auto h-screen flex items-center justify-center">
+        <div className="grid grid-rows-3 grid-flow-col justify-items-center gap-4 w-full">
+          <div className="row-span-3 content-center">
+            <h1 className="uppercase text-8xl">I'm Faezeh</h1>
+            <h2 className="uppercase">A Frontend Developer</h2>
+          </div>
+          <div className="col-span-2 ...">02</div>
+          <div className="row-span-2 col-span-2 ...">03</div>
+        </div>
+      </div>
     </>
   )
 }

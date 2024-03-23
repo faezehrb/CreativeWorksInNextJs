@@ -5,7 +5,7 @@ const AppContext = createContext<any>(undefined)
 
 export function AppWrapper({children} : { children: React.ReactNode }){
 
-    let [ nightMode, setNightMode ] = useState<boolean>(true)
+    let [ nightMode, setNightMode ] = useState<boolean>(false)
 
     return (
         <AppContext.Provider  value = {{ nightMode, setNightMode }}>

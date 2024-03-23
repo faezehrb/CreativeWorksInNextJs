@@ -13,6 +13,7 @@ import Forth from "../components/sections/forth"
 import HamburgerMenu from "../components/navbar/hamburgerMenu"
 import { useAppContext } from "../components/context"
 import CloudContainer from "@/components/appearance/clouds"
+import ModeBtn from "@/components/navbar/modeBtn"
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
@@ -21,7 +22,6 @@ function App() {
     const smoother: any = useRef()
 
   const { nightMode } = useAppContext()
-
 
     useGSAP(
       () => { 
@@ -35,33 +35,34 @@ function App() {
           })
       },{ scope: main }
    )
-    
 
   return (
     <>
       <section className="fixed top-0 w-full z-50">
         <HamburgerMenu />
       </section>
+      <section>
+        <ModeBtn />
+      </section>
       <div id = "smooth-wrapper" ref = {main}>
         <div
-          className = {`${nightMode ? "nightMode" : "morningMode"}`}
+          className = {`${nightMode ? "nightMode font-rubikscribble" : "morningMode font-madimione"} transition-colors ease-in duration-200`}
           id = "smooth-content">
-          <section className="relative w-screen h-screen" id="firstSec">
-            <First />
-          </section>
-          <section className="relative w-screen h-screen" id="secondSec">
-            <Second />
-          </section>
-          <section className="relative w-screen h-screen" id="thirdSec">
-            <Third />
-          </section>
-          <section className="relative w-screen h-screen" id="forthSec">
-            <Forth />
-          </section>
+            <section className="relative w-screen h-screen" id="firstSec">
+              <First />
+            </section>
+            <section className="relative w-screen h-screen" id="secondSec">
+              <Second />
+            </section>
+            <section className="relative w-screen h-screen" id="thirdSec">
+              <Third />
+            </section>
+            <section className="relative w-screen h-screen" id="forthSec">
+              <Forth />
+            </section>
         </div>
           {nightMode ? <NightSky /> : <CloudContainer/>}
       </div>
-     
     </>
   )
 }

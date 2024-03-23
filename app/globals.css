@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,6 +16,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
 body{
   position: relative;
   overflow-x: hidden;
@@ -23,6 +25,7 @@ body{
 .cloud-container {
   animation: moveCloud 120s linear infinite; 
 }
+
 @keyframes moveCloud {
   0% {
     transform: translateX(-100%);
@@ -37,12 +40,8 @@ body{
   background: linear-gradient(to bottom, transparent, rgb(28, 0, 62)) rgb(var(--background-start-rgb));
 }
 #smooth-content.morningMode{
-  /* background: rgb(214,189,230);
-  background: linear-gradient(0deg, rgba(214,189,230,1) 0%, rgba(115,206,235,1) 100%); */
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, transparent, rgb(77, 139, 239, 1)) rgb( 115, 206, 235);
-  
-
 }
 .star {
   position: absolute;
@@ -89,6 +88,3 @@ body{
 /* #svg path {
   @apply w-[120%] block m-auto ;
 } */
-
-
-

@@ -10,6 +10,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children } : Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Rubik+Scribble&display=swap" rel="stylesheet"></link>
+      </head>
       <body>
         <AppWrapper>
           {children} 
