@@ -1,4 +1,6 @@
 
+'use client'
+
 import useThirdSoulRender from '../../hook/useThirdSoulRender'
 import { useAppContext } from "@/components/context"
 

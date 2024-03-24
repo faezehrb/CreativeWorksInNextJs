@@ -1,4 +1,6 @@
 
+'use client'
+
 import { useAppContext } from "@/components/context";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin"
@@ -17,6 +19,7 @@ const useForthSoulRender = () =>{
             width:100,
             duration: 5,
             opacity: 0.4,
+            once: true,
             repeat: -1,
             repeatDelay: 1,
             scrollTrigger: "#forthSec",

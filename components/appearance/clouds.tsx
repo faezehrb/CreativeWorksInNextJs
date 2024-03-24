@@ -1,3 +1,6 @@
+
+'use client'
+
 import { useState, useEffect } from 'react'
 import gsap from 'gsap'
 import Cloud1 from '../svg/cloud1'

@@ -41,7 +41,7 @@ function App() {
       <section className="fixed top-0 w-full z-50">
         <HamburgerMenu />
       </section>
-      <section>
+      <section className="">
         <ModeBtn />
       </section>
       <div id = "smooth-wrapper" ref = {main}>

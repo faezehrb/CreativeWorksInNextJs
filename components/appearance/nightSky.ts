@@ -1,4 +1,6 @@
 
+'use client'
+
 import { useEffect } from "react"
 
 const NightSky: React.FC = () => {

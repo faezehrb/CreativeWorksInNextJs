@@ -1,3 +1,4 @@
+'use client'
 
 const Cloud1: React.FC = () => {
   return (

@@ -1,4 +1,6 @@
 
+'use client'
+
 import { useAppContext } from "@/components/context";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin"
@@ -17,6 +19,7 @@ const useThirdSoulRender = () =>{
             scrollTrigger: "#thirdSec",
             duration: 15, 
             repeat: 0,
+            once: true,
             opacity: 0,
             onComplete: () => {
                 tl.restart()

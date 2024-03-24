@@ -1,5 +1,5 @@
 
-
+'use client'
 
 import FirstSoulSVG from "../svg/firstSoulSVG"
 

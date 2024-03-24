@@ -1,4 +1,5 @@
 
+'use client'
 import ForthSoulSVG from "../svg/forthSoulSVG"
 
 

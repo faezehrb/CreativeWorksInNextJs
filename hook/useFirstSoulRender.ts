@@ -1,4 +1,6 @@
 
+'use client'
+
 import { useAppContext } from "@/components/context";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -23,12 +25,13 @@ const useFirstSoulRender = () => {
             scrollTrigger: "#firstSec",
             repeat: 0,
             opacity: 0,
+            once: true,
             repeatDelay: 0,
             immediateRender: true,
             yoyo: true,
             ease: "power1.inOut",
             onComplete: () => {
-            tl.restart();
+            tl.restart()
             },
             motionPath: {
             path: "#path1",

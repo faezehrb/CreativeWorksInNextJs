@@ -1,4 +1,6 @@
 
+'use client'
+
 import { useAppContext } from "@/components/context";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin"
@@ -19,6 +21,7 @@ const useSecondSoulRender = () =>{
           opacity: 0.7,
           repeat: 0,
           y: -2000,
+          once: true,
           repeatDelay: 0,
           yoyo: true,
           ease: "power1.inOut",

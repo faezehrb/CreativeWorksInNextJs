@@ -1,4 +1,6 @@
 
+'use client'
+
 const Cloud4: React.FC = () => {
   return (
     <svg width="100" height="239" viewBox="0 0 470 239" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,8 +1,6 @@
 
-
-
+'use client'
 import ThirdSoulSVG from "../svg/thirdSoulSVG"
-
 
 const Third = () => {
   return (
