@@ -1,12 +1,17 @@
 
 'use client'
 import ThirdSoulSVG from "../svg/thirdSoulSVG"
-
-const Third = () => {
+import CircularSkills from "../appearance/circularSkills"
+const Third: React.FC = () => {
+  
   return (
     <>
-      <div className='text-8xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-white'>
-        <p >Third</p>
+      <div className="mx-auto flex items-center justify-center" >
+          <div className="grid grid-rows-1 grid-cols-1 grid-flow-col justify-items-center h-full w-full">
+            <div className="row-span-3 content-center">
+             
+            </div>
+          </div>
       </div>
       <ThirdSoulSVG />
     </> 

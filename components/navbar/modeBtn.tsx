@@ -64,7 +64,7 @@ const MorningSvg: React.FC = () => {
 const ModeBtn = () => {
     const { nightMode, setNightMode } = useAppContext()
   return (
-    <div className="fixed right-6 top-6 z-50 cursor-pointer hover:scale-110 transition backdrop-blur-md rounded-full pt-2 pb-2 pl-2 pr-2" onClick={() => setNightMode(!nightMode)}>
+    <div className="fixed right-6 top-6 z-50 cursor-pointer hover:scale-110 transition backdrop-blur-2xl rounded-full pt-1 pb-1 pl-1 pr-1" onClick={() => setNightMode(!nightMode)}>
         {nightMode ? <MorningSvg /> : <NightSvg />}
     </div>
   )

@@ -30,15 +30,17 @@ function App() {
           effects: true,
         })
           ScrollTrigger.create({
-            start: "bottom bottom",
-            markers: true,
+            trigger: "body",
+            start: "top top",
+            end: "bottom bottom",
+            markers: false,
           })
       },{ scope: main }
    )
-
+   
   return (
     <>
-      <section className="fixed top-0 w-full z-50">
+      <section>
         <HamburgerMenu />
       </section>
       <section className="">
@@ -46,7 +48,7 @@ function App() {
       </section>
       <div id = "smooth-wrapper" ref = {main}>
         <div
-          className = {`${nightMode ? "nightMode font-rubikscribble" : "morningMode font-madimione"} transition-colors ease-in duration-200`}
+          className = {`${nightMode ? "nightMode font-rubikscribble" : "morningMode font-madimione"} transition-colors ease-in duration-500`}
           id = "smooth-content">
             <section className="relative w-screen h-screen" id="firstSec">
               <First />
