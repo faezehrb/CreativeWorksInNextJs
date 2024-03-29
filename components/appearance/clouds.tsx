@@ -37,8 +37,8 @@ const CloudContainer: React.FC = () => {
       const newClouds: CloudProps[] = [];
       for (let i = 0; i < 4; i++) {
         newClouds.push({
-          left: typeof window !== 'undefined' ? Math.random() * window.innerWidth + 200.6543 : 0,
-          top: Math.random() * window.innerHeight * 2.756,
+          top: Math.random() * window.innerWidth + 200.345676 ,
+          left: typeof window !== 'undefined' ? Math.random() * window.innerWidth  : 0
         })
       }
       setClouds(newClouds)

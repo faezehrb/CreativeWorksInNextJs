@@ -48,7 +48,7 @@ function App() {
       </section>
       <div id = "smooth-wrapper" ref = {main}>
         <div
-          className = {`${nightMode ? "nightMode font-rubikscribble" : "morningMode font-madimione"} transition-colors ease-in duration-500`}
+          className = {`${nightMode ? "nightMode font-rubikscribble" : "morningMode font-madimione"} transition-colors md:grid " ease-in duration-500`}
           id = "smooth-content">
             <section className="relative w-screen h-screen" id="firstSec">
               <First />
