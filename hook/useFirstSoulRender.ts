@@ -21,7 +21,7 @@ const useFirstSoulRender = () => {
         },
         {
             width: 150,
-            duration: 20,
+            duration: 10,
             scrollTrigger: "#firstSec",
             repeat: 0,
             opacity: 0,

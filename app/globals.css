@@ -47,8 +47,8 @@ body{
   position: absolute;
   width: 0.1px;
   height: 0.1px;
-  background: #fff;
-  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 1px 1px rgb(14, 207, 255);
+  background: #ffffff;
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.8), 0 0 1px 1px rgb(181, 184, 185);
   animation: twinkle 5s infinite, moveStar 60s infinite; /* Very slow motion */
   transition: opacity var(--transition-duration) ease;
 }
@@ -85,7 +85,44 @@ body{
   }
 }
 
-/* #svg path {
-  @apply w-[120%] block m-auto ;
+.sunSvg {
+  -webkit-animation:spin 100s linear infinite;
+  -moz-animation:spin 100s linear infinite;
+  animation:spin 100s linear infinite;
+}
+/* @-moz-keyframes spin { 
+  100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+  100% { -webkit-transform: rotate(360deg); } 
 } */
+@keyframes spin { 
+  0% { 
+      -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); 
+  } 
+  50% { 
+    -webkit-transform: rotate(0deg); 
+    transform:rotate(0deg); 
+  }
+  100% { 
+    -webkit-transform: rotate(360deg); 
+    transform:rotate(360deg);  
+  }
+} 
 
+.moonSVG{
+  animation: moon 5s linear infinite;
+}
+
+@keyframes moon { 
+  0% { 
+    box-shadow: 1px 1px 20px 0.5px #ffffff;
+  } 
+  50% { 
+    box-shadow: 1px 1px 40px 1px #ffffff;
+  } 
+  100% { 
+    box-shadow: 1px 1px 20px 0.5px #ffffff;
+  } 
+}

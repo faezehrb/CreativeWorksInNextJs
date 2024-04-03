@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap-trial/ScrollTrigger"
@@ -50,6 +50,7 @@ function App() {
         <div
           className = {`${nightMode ? "nightMode font-rubikscribble" : "morningMode font-madimione"} transition-colors md:grid " ease-in duration-500`}
           id = "smooth-content">
+          {nightMode ? <NightSky /> : <CloudContainer/>}
             <section className="relative w-screen h-screen" id="firstSec">
               <First />
             </section>
@@ -63,7 +64,6 @@ function App() {
               <Forth />
             </section>
         </div>
-          {nightMode ? <NightSky /> : <CloudContainer/>}
       </div>
     </>
   )

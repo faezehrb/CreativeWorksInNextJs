@@ -8,7 +8,7 @@ const SecondSoulSVGReturn = () => {
     const tl = useSecondSoulRender()
     return( 
         <>
-            <svg id="svg" className='soul2 absolute top-[15rem]' width="1720" height="172" viewBox="0 0 1720 172" fill="none">
+            <svg id="svg" className='soul2 absolute top-[5rem]' width="1720" height="172" viewBox="0 0 1720 172" fill="none">
                 <path id="path2" className='block m-auto opacity-0' d="M1718.81 15.9769C1049 488.5 852 -311.5 1.25185 149.61" stroke="black" strokeLinecap="round"/>
             </svg>
             <svg id="soul2" className='soul2 absolute blur-[3px]' width="150" height="335" viewBox="0 0 430 335" fill="none">

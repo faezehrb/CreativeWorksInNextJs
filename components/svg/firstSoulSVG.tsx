@@ -9,7 +9,7 @@ const FirstSoulSVGReturn = (): any => {
     return (
         <>
             <svg id="svg"
-            className="soul1 absolute" width="1728" height="424" viewBox="0 0 1729 424" fill="none">
+            className="soul1 absolute" width="1500" height="424" viewBox="0 0 1729 424" fill="none">
             <path id="path1"
                 className="block m-auto opacity-0" d="M1727.82 233.097C1196.32 769.597 0.999977 1.00001 0.999977 1.00001" stroke="black"/>
             </svg>
