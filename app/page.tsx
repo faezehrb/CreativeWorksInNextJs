@@ -50,17 +50,17 @@ function App() {
         <div
           className = {`${nightMode ? "nightMode font-rubikscribble" : "morningMode font-madimione"} transition-colors md:grid " ease-in duration-500`}
           id = "smooth-content">
-          {nightMode ? <NightSky /> : <CloudContainer/>}
-            <section className="relative w-screen h-screen" id="firstSec">
+            {nightMode ? <NightSky /> : <CloudContainer/>}
+            <section className="relative w-screen min-h-screen pt-10 pb-10" id="firstSec">
               <First />
             </section>
-            <section className="relative w-screen h-screen" id="secondSec">
+            <section className="relative w-screen min-h-screen pt-10 pb-10" id="secondSec">
               <Second />
             </section>
-            <section className="relative w-screen h-screen" id="thirdSec">
+            <section className="relative w-screen min-h-screen pt-10 pb-10" id="thirdSec">
               <Third />
             </section>
-            <section className="relative w-screen h-screen" id="forthSec">
+            <section className="relative w-screen min-h-screen pt-10 pb-10" id="forthSec">
               <Forth />
             </section>
         </div>

@@ -14,7 +14,7 @@ export default function RootLayout({ children } : Readonly<{ children: React.Rea
         <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Rubik+Scribble&display=swap" rel="stylesheet"></link>
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <AppWrapper>
           {children} 
         </AppWrapper>

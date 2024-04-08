@@ -1,8 +1,7 @@
 
 'use client'
 
-
-import { gsap } from "gsap"e
+import { gsap } from "gsap"
 import { MotionPathPlugin } from "gsap/MotionPathPlugin"
 import { useIsomorphicLayoutEffect } from "usehooks-ts"
 
