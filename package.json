@@ -10,16 +10,16 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.0",
+    "@prisma/client": "^5.12.1",
     "@types/gsap": "^3.0.0",
-    "d3": "^7.9.0",
-    "draggablejs": "^1.0.0",
     "gsap": "^3.12.5",
     "gsap-tools": "^1.0.12",
     "gsap-trial": "^3.12.5",
     "next": "^14.1.4",
+    "prisma": "^5.12.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-draggable": "^4.4.6",
+    "sqlite3": "^5.1.7",
     "usehooks-ts": "^2.15.1"
   },
   "devDependencies": {
