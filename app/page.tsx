@@ -8,7 +8,7 @@ import React, {  useRef } from "react"
 import NightSky from "../components/appearance/nightSky"
 import First from "../components/sections/first"
 import Second from "../components/sections/second"
-import Third from "../components/sections/third"
+import Third, { getStaticProps } from "../components/sections/third"
 import Forth from "../components/sections/forth"
 import HamburgerMenu from "../components/navbar/hamburgerMenu"
 import { useAppContext } from "../components/context"
@@ -37,7 +37,8 @@ function App() {
           })
       },{ scope: main }
    )
-   
+   const companyData = getStaticProps
+
   return (
     <>
       <section>
