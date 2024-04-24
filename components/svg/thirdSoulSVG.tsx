@@ -1,7 +1,7 @@
 
 'use client'
 
-import useThirdSoulRender from '../../hook/useThirdSoulRender'
+import useThirdSoulRender from '../../hook/motion/useThirdSoulRender'
 import { useAppContext } from "@/components/context"
 
 const ThirdSoulSVGReturn = () => {

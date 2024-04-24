@@ -58,7 +58,7 @@ function App() {
               <Second />
             </section>
             <section className="relative w-screen min-h-screen pt-10 pb-10" id="thirdSec">
-              <Third />
+              <Third company={companyData}  />
             </section>
             <section className="relative w-screen min-h-screen pt-10 pb-10" id="forthSec">
               <Forth />

@@ -2,7 +2,7 @@
 'use client'
 
 import { useAppContext } from "@/components/context"
-import useSecondSoulRender from '../../hook/useSecondSoulRender'
+import useSecondSoulRender from '../../hook/motion/useSecondSoulRender'
 
 const SecondSoulSVGReturn = () => {
     const tl = useSecondSoulRender()
