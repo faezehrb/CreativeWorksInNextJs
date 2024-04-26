@@ -1,5 +1,5 @@
 /*!*************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/globals.css ***!
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/globals.css ***!
   \*************************************************************************************************************************************************************************************************************************************************************/
 /*
 ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
@@ -531,6 +531,36 @@ video {
 .left-6 {
   left: 1.5rem;
 }
+.left-\[10vw\] {
+  left: 10vw;
+}
+.left-\[18vw\] {
+  left: 18vw;
+}
+.left-\[24vw\] {
+  left: 24vw;
+}
+.left-\[37vw\] {
+  left: 37vw;
+}
+.left-\[42vw\] {
+  left: 42vw;
+}
+.left-\[56vw\] {
+  left: 56vw;
+}
+.left-\[58vw\] {
+  left: 58vw;
+}
+.left-\[5vw\] {
+  left: 5vw;
+}
+.left-\[75vw\] {
+  left: 75vw;
+}
+.left-\[80vw\] {
+  left: 80vw;
+}
 .right-6 {
   right: 1.5rem;
 }
@@ -552,11 +582,50 @@ video {
 .top-\[11rem\] {
   top: 11rem;
 }
+.top-\[14vh\] {
+  top: 14vh;
+}
+.top-\[25vh\] {
+  top: 25vh;
+}
+.top-\[26vh\] {
+  top: 26vh;
+}
+.top-\[35vh\] {
+  top: 35vh;
+}
 .top-\[4\.3rem\] {
   top: 4.3rem;
 }
+.top-\[41vh\] {
+  top: 41vh;
+}
+.top-\[4vh\] {
+  top: 4vh;
+}
+.top-\[50vh\] {
+  top: 50vh;
+}
+.top-\[54vh\] {
+  top: 54vh;
+}
 .top-\[5rem\] {
   top: 5rem;
+}
+.top-\[5vh\] {
+  top: 5vh;
+}
+.top-\[70vh\] {
+  top: 70vh;
+}
+.top-\[77vh\] {
+  top: 77vh;
+}
+.top-\[80vh\] {
+  top: 80vh;
+}
+.top-\[60vh\] {
+  top: 60vh;
 }
 .z-0 {
   z-index: 0;
@@ -619,6 +688,24 @@ video {
 .h-12 {
   height: 3rem;
 }
+.h-16 {
+  height: 4rem;
+}
+.h-20 {
+  height: 5rem;
+}
+.h-24 {
+  height: 6rem;
+}
+.h-28 {
+  height: 7rem;
+}
+.h-32 {
+  height: 8rem;
+}
+.h-40 {
+  height: 10rem;
+}
 .h-\[35px\] {
   height: 35px;
 }
@@ -643,8 +730,26 @@ video {
 .w-12 {
   width: 3rem;
 }
+.w-16 {
+  width: 4rem;
+}
+.w-20 {
+  width: 5rem;
+}
+.w-24 {
+  width: 6rem;
+}
+.w-28 {
+  width: 7rem;
+}
 .w-3\/4 {
   width: 75%;
+}
+.w-32 {
+  width: 8rem;
+}
+.w-40 {
+  width: 10rem;
 }
 .w-\[35px\] {
   width: 35px;
@@ -809,10 +914,6 @@ video {
 .uppercase {
   text-transform: uppercase;
 }
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -857,6 +958,11 @@ video {
 }
 .transition-colors {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.transition-opacity {
+  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
