@@ -26,7 +26,7 @@ const Forth = () => {
     }, [])
   return (
     <>
-    <div className="container">
+    <div className="container min-h-screen">
       <div className="">
         <div className="bokeh relative">
           <div className="foreground-layer absolute z-3 transition-opacity durati">
@@ -120,7 +120,7 @@ const Forth = () => {
                  
                />
             </div>
-            <div className="absolute w-24 h-24 rounded-full top-[41vh] left-[80vw]">
+            <div className="absolute w-24 h-24 rounded-full top-[41vh] left-[75vw]">
             <Image
                   src="/img/logo/bootstrap.png"
                   width={100}
@@ -129,7 +129,7 @@ const Forth = () => {
                  
                />
             </div>
-            <div className="absolute w-28 h-28 rounded-full top-[60vh] left-[42vw]">
+            <div className="absolute w-28 h-28 rounded-full top-[60vh] left-[50vw]">
             <Image
                   src="/img/logo/redux.png"
                   width={100}

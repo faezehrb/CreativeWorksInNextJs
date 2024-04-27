@@ -15,6 +15,8 @@ import HamburgerMenu from "../components/navbar/hamburgerMenu";
 import { useAppContext } from "../components/context";
 import CloudContainer from "@/components/appearance/clouds";
 import ModeBtn from "@/components/navbar/modeBtn"
+import SecNav from "@/components/navbar/secNav";
+import ContactForm from "@/components/sections/fifth";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
@@ -53,31 +55,36 @@ export default function App() {
 
   return (
     <>
-      <section>
-        <HamburgerMenu />
-      </section>
-      <section className="">
-        <ModeBtn />
-      </section>
+     
       <div id="smooth-wrapper" ref={main}>
         <div
           className={`${nightMode ? "nightMode font-rubikscribble" : "morningMode font-madimione"} transition-colors md:grid ease-in duration-500`}
           id="smooth-content"
         >
           {nightMode ? <NightSky /> : <CloudContainer />}
-          <section className="relative w-screen min-h-screen pt-10 pb-10" id="firstSec">
+          <section className="relative w-screen " id="firstSec">
             <First />
           </section>
-          <section className="relative w-screen min-h-screen pt-10 pb-10" id="secondSec">
+          <section className="relative w-screen min-h-screen" id="secondSec">
             <Second />
           </section>
-          <section className="relative w-screen min-h-screen pt-10 pb-10" id="thirdSec">
-            {/* <Third /> */}
+          <section className="relative w-screen min-h-screen" id="thirdSec">
+            <Third />
           </section>
-          <section className="relative w-screen min-h-screen pt-10 pb-10" id="forthSec">
+          <section className="relative w-screen min-h-screen" id="forthSec">
             <Forth />
           </section>
+          <section className="relative w-screen h-screen" id="fifthSec">
+            <ContactForm />
+          </section>
         </div>
+      </div>
+       <div>
+        <HamburgerMenu />
+      </div>
+      <div className="">
+        <ModeBtn />
+        <SecNav />
       </div>
     </>
   )

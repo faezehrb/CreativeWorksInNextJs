@@ -11,7 +11,7 @@ const First = () => {
   return (
     <> 
       <FirstSoulSVG /> 
-      <div className="container mx-auto h-screen grid place-items-center z-[10]">
+      <div className="container mx-auto min-h-screen grid place-items-center z-[10]">
         <div className="grid grid-cols-6 md:grid-cols-1 w-full">
           <div></div>
             <div className="col-span-3 content-center md:justify-items-center md:place-content-center md:justify-self-center">
