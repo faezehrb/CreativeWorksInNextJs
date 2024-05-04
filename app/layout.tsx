@@ -3,7 +3,7 @@ import "./globals.css"
 import { AppWrapper } from '@/components/context'
 
 export const metadata: Metadata = {
-  title: "Creative",
+  title: "Faezeh Roohbakhsh",
   description: "A Front-end Developer",
 }
 
@@ -11,14 +11,12 @@ export default function RootLayout({ children } : Readonly<{ children: React.Rea
   return (
     <html lang="en">
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap" rel="stylesheet"></link>
-        <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Rubik+Scribble&display=swap" rel="stylesheet"></link>
+      <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica+SC&family=NTR&display=swap" rel="stylesheet"></link>
+        {/* <link href="https://fonts.googleapis.com/css2?family=NTR&display=swap" rel="stylesheet"></link> */}
       </head>
-      <body className="overflow-x-hidden">
         <AppWrapper>
           {children} 
         </AppWrapper>
-      </body>
     </html>
   )
 }

@@ -6,7 +6,7 @@ import { useEffect } from "react"
 const NightSky: React.FC = () => {
   useEffect(() => {
     const stars: number = 300
-    const body: HTMLElement | null = document.querySelector("#smooth-wrapper")
+    const body: HTMLElement | null = document.querySelector("#mainContent")
     if (!body) return
     for (let i = 0; i < stars; i++) {
       const star: HTMLDivElement = document.createElement("div")
