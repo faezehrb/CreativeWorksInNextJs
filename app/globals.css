@@ -38,7 +38,9 @@ body{
 .cloud-container {
   animation: moveCloud 120s linear infinite; 
 }
-
+section{
+  overflow: hidden;
+}
 @keyframes moveCloud {
   0% {
     transform: translateX(-100%);
