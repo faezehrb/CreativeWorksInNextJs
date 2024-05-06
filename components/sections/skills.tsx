@@ -28,7 +28,6 @@ const Skills = () => {
     <>
     <div className="container mx-auto px-52 lg:px-20 md:px-10 content-center min-h-screen bokeh relative">
          <div className="grid grid-cols-6 gap-16 lg:grid-cols-4 lg:gap-8 md:grid-cols-3 md:gap-4 backdrop-blur-md p-10 justify-items-center foreground-layer z-3 transition-opacity durati">
-               
                <div className="w-22 h-22 rounded-full]">
                   <Image
                      src="/img/logo/github.png"

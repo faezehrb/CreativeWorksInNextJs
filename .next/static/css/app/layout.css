@@ -974,10 +974,11 @@ body.morningMode{
   background: linear-gradient(to bottom, transparent, rgb(77, 139, 239)) rgb( 115, 206, 235);
 }
 body.nightMode{
-  background: linear-gradient(to bottom, transparent, rgba(68,0,115)) rgb(0, 0, 0);
-  /* background: linear-gradient(180deg, hsla(0, 0%, 0%, 1) 80%, hsla(272, 94%, 48%, 1) 100%); */
+  /* background: linear-gradient(0deg, rgba(53, 0, 160, 0) 20%, rgba(0,0,0,0.7987788865546218) 80%); */
+  
+  /* background: linear-gradient(to top, transparent, rgba(68,0,115,1) 0%, rgba(0,0,0,1) 15%); */
+  background: linear-gradient(to bottom, transparent, rgb(35, 0, 78) 100%) rgb(0, 0, 0);
 }
-
 .star {
   position: absolute;
   width: 0.1px;
@@ -1295,8 +1296,8 @@ body.nightMode{
     line-height: 1;
   }
 
-  .md\:text-\[0\.5rem\] {
-    font-size: 0.5rem;
+  .md\:text-\[0\.6rem\] {
+    font-size: 0.6rem;
   }
 
   .md\:text-\[0\.7rem\] {
