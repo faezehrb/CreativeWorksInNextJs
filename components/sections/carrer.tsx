@@ -3,7 +3,6 @@ import ThirdSoulSVG from "../svg/thirdSoulSVG"
 import { useAppContext} from '../context'
 import Link from 'next/link'
 
-
 interface Company {
   id: number,
   name: string,
@@ -13,35 +12,37 @@ interface Company {
   href: string 
 }
 
- function Carrer() {
+ async function Carrer() {
   const { nightMode } = useAppContext()
-  // const response = await fetch('http://localhost:8000/companies', { method: 'GET' })
-  // const companies: Company[] = await response.json()
+  const response = await fetch('http://localhost:8000/companies', { 
+    method: 'GET',
+    cache: 'no-store'
+  })
+  const companies: Company[] = await response.json()
 
   return (
     <>
       <div className="container mx-auto px-52 lg:px-20 md:px-10 min-h-screen grid place-items-center">
         <div className={`${nightMode ? null : "rainBow"} grid place-items-center grid-cols-4 backdrop-blur-md z-20  lg:grid-cols-2 md:grid-cols-1 gap-8 justify-items-center p-10`}>
           
-            {/* {companies.map((item ) => (
+            {companies.map((item) => (
               <Link key={item.id} href={item.href} target='_blank'>
-                  <div  className={`${nightMode ? null : "rainBow"} card min-h-[50vh] w-full lg:rounded-none flex items-center flex-col p-2 relative justify-center text-[1.5em] cursor-pointer`}>
+                <div  className={`${nightMode ? null : "rainBow"} card min-h-[50vh] w-full lg:rounded-none  p-2 relative text-[1.5em] cursor-pointer`}>
                   <Image
                     src={item.img}
                     width={70}
                     height={70}
                     alt="Picture of the author"
-                    className='z-10 rounded-lg'
+                    className='z-10 rounded-xl grid place-items-center'
                   />
                   <p className='z-10 text-white text-center text-gl'>{item.name}</p>
-                  <p className='z-10 text-white p-5 text-center text-gl'>{item.position}</p>
+                  <p className='z-10 text-white  text-center text-gl'>{item.position}</p>
                   <p className='z-10 text-white  text-center text-sm'>{item.detail}</p>
                 </div>
               </Link>
-           
-            ))} */}
+            ))}
 
-            <div  className={`${nightMode ? null : "rainBow"} card min-h-[50vh] w-full lg:rounded-none grid place-items-center p-2 relative  text-[1.5em] cursor-pointer`}>
+            {/* <div  className={`${nightMode ? null : "rainBow"} card min-h-[50vh] w-full lg:rounded-none grid place-items-center p-2 relative  text-[1.5em] cursor-pointer`}>
               <Link href='https://sepanodata.ir/' target='_blank'>
                 <Image
                   src="/img/sepano.png"
@@ -111,7 +112,7 @@ interface Company {
                 <p className='z-10 text-white p-5 text-center text-gl'>FRONT END</p>
                 <p className='z-10 text-white  text-center text-sm'>A platform for buying and selling medical and beauty equipment.</p>
               </Link>
-            </div> */}
+            </div> */} 
         </div>
       </div>
       <ThirdSoulSVG />

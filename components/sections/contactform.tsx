@@ -77,7 +77,6 @@ const ContactForm = () => {
       </button>
       </form>
     </div>
-   
   )
 }
 

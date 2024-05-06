@@ -1,0 +1,37 @@
+
+{
+    "companies": [
+        {
+            "id": 1,
+            "img": "/img/sepano.png",
+            "name": "SEPANO DATA",
+            "position": "FRONT END",
+            "detail": "A design and production of Windows and web software company in cooperation with high-level companies and government organizations.",
+            "href": "https://sepanodata.ir/"
+        },
+        {
+            "id": 2,
+            "img": "/img/bimito.jpeg",
+            "name": "BIMITO",
+            "position": "FRONT END",
+            "detail": "An online insurance shopping platform for buying and renewing all types of insurance.",
+            "href": "https://bimito.com/blog/"
+        },
+        {
+            "id": 3,
+            "img": "/img/shoga.png",
+            "name": "SHOGA INDUSTRIES",
+            "position": "FRONT END",
+            "detail": "A factory for the domestic production and export of glass jars and bottles.",
+            "href": "https://shishegaz.com/"
+        },
+        {
+            "id": 4,
+            "img": "/img/dermavitrin.jpeg",
+            "name": "DERMAVITRIN",
+            "position": "FRONT END",
+            "detail": "A platform for buying and selling medical and beauty equipment.",
+            "href": "https://dermavitrin.com/"
+        }
+    ]
+    }
