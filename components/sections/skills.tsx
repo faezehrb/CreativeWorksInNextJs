@@ -1,43 +1,103 @@
 
 'use client'
-import { useEffect } from "react";
+import { useEffect, useState } from "react"
 import ForthSoulSVG from "../svg/forthSoulSVG"
-import Image from 'next/image'
-import { gsap } from "gsap";
+import Image from "next/image"
+import { gsap } from "gsap"
+
+interface Skills {
+  src: string
+}
 
 const Skills = () => {
-   useEffect(() => {
+  const [skills, setSkills] = useState<Skills[]>([])
+  const [skillsFetched, setSkillsFetched] = useState<boolean>(false)
+
+  useEffect(() => {
+    const getSkills = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/skills", {
+          method: "GET",
+          cache: "no-store",
+        })
+        const data: Skills[] = await response.json()
+        setSkills(data)
+        setSkillsFetched(true) // Set skillsFetched to true after skills data is fetched
+      } catch (error) {
+        console.error("Error fetching skills:", error)
+      }
+    }
+
+    getSkills()
+  }, [])
+
+  useEffect(() => {
+    // Run GSAP animations only if skills data has been fetched
+    if (skillsFetched) {
       const animations = [];
-  
+
       for (let i = 0; i < 12; i++) {
         animations.push({
-          x: Math.random() * 4 - 2, // Random number between -2 and 2
-          y: Math.random() * 4 - 2, // Random number between -2 and 2
-          rotation: Math.random() * 4 - 2, // Random number between -2 and 2
+          x: Math.random() * 4 - 2,
+          y: Math.random() * 4 - 2,
+          rotation: Math.random() * 4 - 2,
         });
       }
-  
+
       animations.forEach((animation, index) => {
-        gsap.fromTo(`.foreground-layer > div:nth-child(${index + 1})`, 
-          { x: animation.x, y: animation.y, rotation: animation.rotation }, // Initial position and rotation
-          { x: -animation.x, y: -animation.y, rotation: -animation.rotation, duration: 1, repeat: -1, yoyo: true, ease: 'power1.inOut' }
+        gsap.fromTo(
+          `.foreground-layer > div:nth-child(${index + 1})`,
+          { x: animation.x, y: animation.y, rotation: animation.rotation },
+          {
+            x: -animation.x,
+            y: -animation.y,
+            rotation: -animation.rotation,
+            duration: 1,
+            repeat: -1,
+            yoyo: true,
+            ease: "power1.inOut",
+          }
         );
       });
-    }, [])
+    }
+  }, [skillsFetched]) 
   return (
     <>
-      <div className="container mx-auto px-52 lg:px-20 md:px-10 content-center min-h-screen bokeh relative">
-            <div className="grid grid-cols-6 gap-16 lg:grid-cols-4 lg:gap-8 md:grid-cols-3 md:gap-4 backdrop-blur-md p-10 justify-items-center foreground-layer z-3 transition-opacity durati">
-                  <div className="w-22 h-22 rounded-full]">
-                     <Image
-                        src="/img/logo/github.png"
-                        width={100}
-                        height={100}
-                        alt="Picture of the author"
-                     
-                     />
-                  </div>
-                  <div className="w-22 h-22 rounded-full]">
+      <div className="container mx-auto px-32 lg:px-20 md:px-10 grid content-center min-h-screen bokeh relative">
+      <div className="backdrop-blur-md z-20 rounded-full p-3 mb-20">
+          <h2 className="text-center text-white text-4xl">
+             Some of My Technical Skills
+          </h2>
+        </div>
+        <div className="grid grid-cols-6 gap-16 lg:grid-cols-4 lg:gap-8 md:grid-cols-3 md:gap-4 backdrop-blur-md p-10 justify-items-center foreground-layer z-3 transition-opacity durati">
+          {skills.map((item, index) => (
+            <div key={index} className="w-22 h-22 rounded-full">
+              <Image
+                src={item.src}
+                width={100}
+                height={100}
+                alt={`Skill ${index + 1}`}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+      <ForthSoulSVG />
+    </>
+  );
+};
+
+export default Skills;
+
+
+
+
+
+
+
+
+
+ {/* <div className="w-22 h-22 rounded-full]">
                      <Image
                            src="/img/logo/wordpress.png"
                            width={100}
@@ -135,11 +195,4 @@ const Skills = () => {
                            alt="Picture of the author"
                         
                         />
-                  </div>
-            </div>
-      </div>
-      <ForthSoulSVG />
-    </>    
-  )
-}
-export default Skills
+                  </div> */}

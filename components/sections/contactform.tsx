@@ -28,7 +28,7 @@ const ContactForm = () => {
 //   }
 
   return (
-    <div className='container min-h-screen grid place-items-center'>
+    <div className='container mx-auto px-32 min-h-screen grid place-items-center'>
       <form className="w-96">
       <div className="mb-4">
         <label htmlFor="name" className="block text-black">Name</label>

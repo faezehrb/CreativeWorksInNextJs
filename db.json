@@ -33,5 +33,56 @@
             "detail": "A platform for buying and selling medical and beauty equipment.",
             "href": "https://dermavitrin.com/"
         }
+    ],
+    
+    "skills": [
+        {
+            "id": 1,
+            "src": "/img/logo/github.png"
+        },
+        {
+            "id": 2,
+            "src": "/img/logo/wordpress.png"
+        },
+        {
+            "id": 3,
+            "src": "/img/logo/next.png"
+        },
+        {
+            "id": 4,
+            "src": "/img/logo/html.png"
+        },
+        {
+            "id": 5,
+            "src": "/img/logo/jquery.png"
+        },
+        {
+            "id": 6,
+            "src": "/img/logo/js.png"
+        },
+        {
+            "id": 7,
+            "src": "/img/logo/react.png"
+        },
+        {
+            "id": 8,
+            "src": "/img/logo/tailwind.png"
+        },
+        {
+            "id": 9,
+            "src": "/img/logo/ts.png"
+        },
+        {
+            "id": 10,
+            "src": "/img/logo/css.png"
+        },
+        {
+            "id": 11,
+            "src": "/img/logo/bootstrap.png"
+        },
+        {
+            "id": 12,
+            "src": "/img/logo/redux.png"
+        }
     ]
     }

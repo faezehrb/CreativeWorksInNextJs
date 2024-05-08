@@ -41,19 +41,19 @@ const handleSmoothScroll = (target: number) => {
     return (
       <div className='fixed bottom-0 z-50 w-screen grid place-items-center justify-center items-center md:p-2'>
         <ul className='backdrop-blur-2xl rounded-full mb-7 flex justify-center'>
-          <li className={`text-white transform transition-all text-center pl-7 pr-7 pt-3 pb-3 text-lg md:pl-2 md:pr-2 md:pt-1 md:pb-1 cursor-pointer ${nightMode ? "md:text-[0.65rem]" : "md:text-[0.75rem]"} ${activeSection === 'firstSec' ? 'bg-blue-500 rounded-full' : ''}`} onClick={() => handleSmoothScroll('firstSec')}>
+          <li className={`text-white transform transition-all text-center pl-7 pr-7 pt-3 pb-3 text-lg md:pl-3 md:pr-3 md:pt-1 md:pb-1 cursor-pointer ${nightMode ? "md:text-[0.65rem]" : "md:text-[0.75rem]"} ${activeSection === 'firstSec' ? 'bg-blue-500 rounded-full' : ''}`} onClick={() => handleSmoothScroll('firstSec')}>
             HOME
           </li>
-          <li className={`text-white transform transition-all text-center pl-7 pr-7 pt-3 pb-3 text-lg md:pl-2 md:pr-2 md:pt-1 md:pb-1 cursor-pointer ${nightMode ? "md:text-[0.65rem]" : "md:text-[0.75rem]"} ${activeSection === 'secondSec' ? 'bg-blue-500 rounded-full' : ''}`} onClick={() => handleSmoothScroll('secondSec')}>
+          <li className={`text-white transform transition-all text-center pl-7 pr-7 pt-3 pb-3 text-lg md:pl-3 md:pr-3 md:pt-1 md:pb-1 cursor-pointer ${nightMode ? "md:text-[0.65rem]" : "md:text-[0.75rem]"} ${activeSection === 'secondSec' ? 'bg-blue-500 rounded-full' : ''}`} onClick={() => handleSmoothScroll('secondSec')}>
             ABOUT ME
           </li>
-          <li className={`text-white transform transition-all text-center pl-7 pr-7 pt-3 pb-3 text-lg md:pl-2 md:pr-2 md:pt-1 md:pb-1 cursor-pointer ${nightMode ? "md:text-[0.65rem]" : "md:text-[0.75rem]"} ${activeSection === 'thirdSec' ? 'bg-blue-500 rounded-full' : ''}`} onClick={() => handleSmoothScroll('thirdSec')}>
+          <li className={`text-white transform transition-all text-center pl-7 pr-7 pt-3 pb-3 text-lg md:pl-3 md:pr-3 md:pt-1 md:pb-1 cursor-pointer ${nightMode ? "md:text-[0.65rem]" : "md:text-[0.75rem]"} ${activeSection === 'thirdSec' ? 'bg-blue-500 rounded-full' : ''}`} onClick={() => handleSmoothScroll('thirdSec')}>
             CARRER
           </li>
-          <li className={`text-white transform transition-all text-center pl-7 pr-7 pt-3 pb-3 text-lg md:pl-2 md:pr-2 md:pt-1 md:pb-1 cursor-pointer ${nightMode ? "md:text-[0.65rem]" : "md:text-[0.75rem]"} ${activeSection === 'forthSec' ? 'bg-blue-500 rounded-full' : ''}`} onClick={() => handleSmoothScroll('forthSec')}>
+          <li className={`text-white transform transition-all text-center pl-7 pr-7 pt-3 pb-3 text-lg md:pl-3 md:pr-3 md:pt-1 md:pb-1 cursor-pointer ${nightMode ? "md:text-[0.65rem]" : "md:text-[0.75rem]"} ${activeSection === 'forthSec' ? 'bg-blue-500 rounded-full' : ''}`} onClick={() => handleSmoothScroll('forthSec')}>
             SKILLS
           </li>
-          <li className={`text-white transform transition-all text-center pl-7 pr-7 pt-3 pb-3 text-lg md:pl-2 md:pr-2 md:pt-1 md:pb-1 cursor-pointer ${nightMode ? "md:text-[0.65rem]" : "md:text-[0.75rem]"} ${activeSection === 'fifthSec' ? 'bg-blue-500 rounded-full' : ''}`} onClick={() => handleSmoothScroll('fifthSec')}>
+          <li className={`text-white transform transition-all text-center pl-7 pr-7 pt-3 pb-3 text-lg md:pl-3 md:pr-3 md:pt-1 md:pb-1 cursor-pointer ${nightMode ? "md:text-[0.65rem]" : "md:text-[0.75rem]"} ${activeSection === 'fifthSec' ? 'bg-blue-500 rounded-full' : ''}`} onClick={() => handleSmoothScroll('fifthSec')}>
             CONTACT ME
           </li>
         </ul>

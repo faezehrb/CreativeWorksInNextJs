@@ -1,7 +1,7 @@
 
 'use client'
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, } from "react"
 import NightSky from "../components/appearance/nightSky"
 import HamburgerMenu from "../components/navbar/hamburgerMenu"
 import { useAppContext } from "../components/context"
@@ -14,10 +14,13 @@ import AboutMe from "../components/sections/aboutme"
 import Carrer from "../components/sections/carrer"
 import Skills from "../components/sections/skills"
 
-// gsap.registerPlugin(ScrollTrigger)
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 
-export default function App({ serverData }: any) {
+export default function App() {
   const main: any = useRef()
   const { nightMode } = useAppContext()
 
