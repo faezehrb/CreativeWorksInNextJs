@@ -16,22 +16,22 @@ interface Company {
 function Carrer() {
   const { nightMode } = useAppContext();
 
-  const [companies, setCompanies] = useState<Company[] | undefined>(undefined);
+  // const [companies, setCompanies] = useState<Company[] | undefined>(undefined);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        const response = await fetch("http://localhost:8000/companies", {
-          method: "GET",
-          cache: "no-store",
-        });
-        setCompanies(await response.json());
-      } catch (error) {
-        console.error(error)
-        setCompanies([])
-      }
-    })();
-  }, []);
+  // useEffect(() => {
+  //   (async () => {
+  //     try {
+  //       const response = await fetch("http://localhost:8000/companies", {
+  //         method: "GET",
+  //         cache: "no-store",
+  //       });
+  //       setCompanies(await response.json());
+  //     } catch (error) {
+  //       console.error(error)
+  //       setCompanies([])
+  //     }
+  //   })();
+  // }, []);
 
   return (
     <>
@@ -46,7 +46,7 @@ function Carrer() {
             nightMode ? null : "rainBow"
           } grid place-items-center grid-cols-4 backdrop-blur-md rounded-2xl z-20 lg:grid-cols-2 md:grid-cols-1 gap-8 justify-items-center p-10`}
         >
-          {companies === undefined ? (
+          {/* {companies === undefined ? (
             <>Loading...</>
           ) : (
             companies.map((item) => (
@@ -75,18 +75,8 @@ function Carrer() {
                 </div>
               </Link>
             ))
-          )}
-        </div>
-      </div>
-      <ThirdSoulSVG />
-    </>
-  );
-}
-
-export default Carrer;
-
-{
-  /* <div  className={`${nightMode ? null : "rainBow"} card min-h-[50vh] w-full lg:rounded-none grid place-items-center p-2 relative  text-[1.5em] cursor-pointer`}>
+          )} */}
+           <div  className={`${nightMode ? null : "rainBow"} card min-h-[50vh] w-full lg:rounded-none grid place-items-center p-2 relative  text-[1.5em] cursor-pointer`}>
               <Link href='https://sepanodata.ir/' target='_blank'>
                 <Image
                   src="/img/sepano.png"
@@ -143,18 +133,12 @@ export default Carrer;
                 <p className='z-10 text-white text-center text-sm'>A platform for buying and selling medical and beauty equipment.</p>
             </Link>
             </div>
-            {/* <div  className={`${nightMode ? null : "rainBow"} card min-h-[50vh] lg:rounded-none flex items-center flex-col p-2 relative justify-center text-[1.5em] cursor-pointer`}>
-              <Link href='https://dermavitrin.com/' target='_blank'>
-                <Image
-                  src="/img/dermavitrin.jpeg"
-                  width={70}
-                  height={70}
-                  alt="Picture of the author"
-                  className='z-10 pb-4 m-auto rounded-full'
-                />
-                <p className='z-10 text-white text-center text-gl'>DERMA VITRIN</p>
-                <p className='z-10 text-white p-5 text-center text-gl'>FRONT END</p>
-                <p className='z-10 text-white  text-center text-sm'>A platform for buying and selling medical and beauty equipment.</p>
-              </Link>
-            </div> */
+        </div>
+      </div>
+      <ThirdSoulSVG />
+    </>
+  );
 }
+
+export default Carrer;
+

@@ -17,7 +17,7 @@ const useFirstSoulRender = () => {
         "#soul1",
         {
             duration: 1,
-            right: -1000
+            right: -500
         },
         {
             width: 150,

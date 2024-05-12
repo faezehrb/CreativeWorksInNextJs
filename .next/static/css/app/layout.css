@@ -583,11 +583,11 @@ video {
 .mb-1 {
   margin-bottom: 0.25rem;
 }
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-.mb-20 {
-  margin-bottom: 5rem;
 }
 .mb-4 {
   margin-bottom: 1rem;
@@ -763,6 +763,9 @@ video {
 .p-10 {
   padding: 2.5rem;
 }
+.p-16 {
+  padding: 4rem;
+}
 .p-2 {
   padding: 0.5rem;
 }
@@ -772,8 +775,9 @@ video {
 .p-4 {
   padding: 1rem;
 }
-.p-5 {
-  padding: 1.25rem;
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 .px-32 {
   padding-left: 8rem;
@@ -796,9 +800,6 @@ video {
 }
 .pb-3 {
   padding-bottom: 0.75rem;
-}
-.pb-4 {
-  padding-bottom: 1rem;
 }
 .pl-1 {
   padding-left: 0.25rem;
@@ -999,7 +1000,7 @@ body.nightMode{
   /* background: linear-gradient(0deg, rgba(53, 0, 160, 0) 20%, rgba(0,0,0,0.7987788865546218) 80%); */
   
   /* background: linear-gradient(to top, transparent, rgba(68,0,115,1) 0%, rgba(0,0,0,1) 15%); */
-  background: linear-gradient(to bottom, transparent, rgb(35, 0, 78) 100%) rgb(0, 0, 0);
+  background: linear-gradient(to bottom, transparent, rgb(15, 0, 33) 100%) rgb(0, 0, 0);
 }
 .star {
   position: absolute;

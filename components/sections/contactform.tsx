@@ -1,83 +1,74 @@
 
 'use client'
-import { useState } from 'react'
-
+import React from 'react';
+import emailjs from 'emailjs-com'; 
+import ForthSoulSVG from '../svg/forthSoulSVG';
 
 const ContactForm = () => {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     email: '',
-//     message: ''
-//   })
+  const sendEmail = (e: any) => {
+    e.preventDefault();
 
-//   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-//     setFormData({ ...formData, [e.target.name]: e.target.value })
-//   }
+    emailjs
+      .sendForm('service_9zvjl25', 'template_7vnkzpw', e.target, 'VRJewbjohGOIRROkz')
+      .then(
+        (result) => {
+          alert('Thanks for your message, it sent successfully!');
+          e.target.reset()
+        },
+        (error) => {
+          alert('I cannot get your message. Please try again.');
+        }
+      );
 
-//   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-//     e.preventDefault()
-
-//     try {
-//       await axios.post('/api/contact', formData)
-//       console.log("hellooo")
-//       alert('Message sent successfully!')
-//     } catch (error) {
-//       console.error('Error sending message:', error)
-//       alert('An error occurred. Please try again later.')
-//     }
-//   }
+    e.target.reset();
+  };
 
   return (
-    <div className='container mx-auto px-32 min-h-screen grid place-items-center'>
-      <form className="w-96">
-      <div className="mb-4">
-        <label htmlFor="name" className="block text-black">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          // value={formData.name}
-          // onChange={handleChange}
-          placeholder="Your Name"
-          required
-          className="mt-1 p-2 w-full text-black border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-        />
-      </div>
-      <div className="mb-4">
-        <label htmlFor="email" className="block text-black">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          // value={formData.email}
-          // onChange={handleChange}
-          placeholder="Your Email"
-          required
-          className="mt-1 p-2 w-full text-black border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-        />
-      </div>
-      <div className="mb-6">
-        <label htmlFor="message" className="block text-black">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          // value={formData.message}
-          // onChange={handleChange}
-          placeholder="Your Message"
-          rows={4}
-          required
-          className="mt-1 p-2 w-full text-black border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-        />
-      </div>
-      <button
-        type="submit"
-        className="w-full bg-blue-500 text-black py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300"
-      >
-        Send Message
-      </button>
+    <div className="container mx-auto px-1 min-h-screen grid content-center justify-items-center">
+      <ForthSoulSVG />
+      <form className="w-96" onSubmit={sendEmail}>
+        <div className="mb-4">
+          <label htmlFor="name" className="block text-white">Name</label>
+          <input
+            type="text" name="user_name"
+            id="name"
+            placeholder="Your Name"
+            required
+            className="mt-1 p-2 w-full text-black border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-4">
+          <label htmlFor="email" className="block text-white">Email</label>
+          <input
+            type="email" name="user_email"
+            id="email"
+            placeholder="Your Email"
+            required
+            className="mt-1 p-2 w-full text-black border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <div className="mb-6">
+          <label htmlFor="message" className="block text-white">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your Message"
+            rows={4}
+            required
+            className="mt-1 p-2 w-full text-black border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+          />
+        </div>
+        <button
+          type="submit"
+          value="Send"
+          className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition-colors duration-300"
+        >
+          Send Message
+        </button>
       </form>
     </div>
-  )
-}
+  );
+ 
+};
 
-export default ContactForm
+export default ContactForm;
