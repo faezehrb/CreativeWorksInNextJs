@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ThirdSoulSVG from "../svg/thirdSoulSVG";
 import { useAppContext } from "../context";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -135,7 +134,7 @@ function Carrer() {
             </div>
         </div>
       </div>
-      <ThirdSoulSVG />
+     
     </>
   );
 }

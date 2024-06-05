@@ -1,7 +1,7 @@
 
 'use client'
 import { useEffect, useState } from "react"
-import ForthSoulSVG from "../svg/forthSoulSVG"
+import ThirdSoulSVG from "../svg/thirdSoulSVG";
 import Image from "next/image"
 import { gsap } from "gsap"
 import { useAppContext } from "../context"
@@ -64,13 +64,14 @@ const Skills = () => {
   }, []) 
   return (
     <>
+    <ThirdSoulSVG />
       <div className="container mx-auto px-32 lg:px-20 md:px-10 grid content-center min-h-screen bokeh relative">
         <div className="backdrop-blur-md z-20 rounded-full p-3 mb-10">
           <h2 className="text-center text-white text-4xl">
              Some of My Technical Skills
           </h2>
         </div>
-        <div className={`${nightMode ? "card" : null} grid grid-cols-6 gap-16 lg:grid-cols-4 lg:gap-8 md:grid-cols-3 md:gap-4 backdrop-blur-md p-16 justify-items-center foreground-layer z-3 transition-opacity durati`}>
+        <div className="grid grid-cols-6 gap-16 lg:grid-cols-4 lg:gap-8 md:grid-cols-3 md:gap-4 backdrop-blur-md p-16 justify-items-center foreground-layer z-3 transition-opacity durati">
           {/* {skills.map((item, index) => (
             <div key={index} className="w-22 h-22 rounded-full">
               <Image
@@ -146,7 +147,7 @@ const Skills = () => {
                   </div>
                   <div className="w-22 h-22 rounded-full]">
                      <Image
-                           src="/img/logo/wordpress.png"
+                           src="/img/logo/figma.png"
                            width={100}
                            height={100}
                            alt="Picture of the author"
@@ -191,6 +192,7 @@ const Skills = () => {
                   </div>
         </div>
       </div>
+      
     </>
   );
 };
