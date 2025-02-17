@@ -11,8 +11,8 @@ interface Skills {
 }
 
 const Skills = () => {
-  const [skills, setSkills] = useState<Skills[]>([])
-  const [skillsFetched, setSkillsFetched] = useState<boolean>(false)
+  // const [skills, setSkills] = useState<Skills[]>([])
+  // const [skillsFetched, setSkillsFetched] = useState<boolean>(false)
   const { nightMode } = useAppContext();
   // useEffect(() => {
   //   const getSkills = async () => {
@@ -71,8 +71,9 @@ const Skills = () => {
              Some of My Technical Skills
           </h2>
         </div>
-        <div className="grid grid-cols-6 gap-16 lg:grid-cols-4 lg:gap-8 md:grid-cols-3 md:gap-4 backdrop-blur-md p-16 justify-items-center foreground-layer z-3 transition-opacity durati">
-          {/* {skills.map((item, index) => (
+          <div
+              className="grid grid-cols-6 gap-16 lg:grid-cols-4 lg:gap-8 md:grid-cols-3 md:gap-4 backdrop-blur-md p-16 justify-items-center foreground-layer z-3 transition-opacity durati">
+              {/* {skills.map((item, index) => (
             <div key={index} className="w-22 h-22 rounded-full">
               <Image
                 src={item.src}
@@ -82,128 +83,176 @@ const Skills = () => {
               />
             </div>
           ))} */}
-                  <div className="w-22 h-22 rounded-full">
-                     <Image
-                        src="/img/logo/github.png"
-                        width={95}
-                        height={95}
-                        alt="Picture of the author"
-                     
-                     />
-                  </div>
-                  <div className="w-22 h-22 rounded-full">
-                     <Image
-                        src="/img/logo/next.png"
-                        width={95}
-                        height={95}
-                        alt="Picture of the author"
-                     
-                     />
-                  </div>
-                  <div className="w-22 h-22 rounded-full]">
-                     <Image
-                           src="/img/logo/html.png"
-                           width={100}
-                           height={100}
-                           alt="Picture of the author"
-                        
-                        />
-                  </div>
-                  <div className="w-22 h-22 rounded-full]">
-                     <Image
-                           src="/img/logo/jquery.png"
-                           width={100}
-                           height={100}
-                           alt="Picture of the author"
-                        
-                        />
-                  </div>
-                  <div className="w-22 h-22 rounded-full">
+              <div className="w-22 h-22 rounded-full">
                   <Image
-                        src="/img/logo/js.png"
-                        width={100}
-                        height={100}
-                        alt="Picture of the author"
-                     
-                     />
-                  </div>
-                  <div className="w-22 h-22 rounded-full">
-                     <Image
-                           src="/img/logo/react.png"
-                           width={100}
-                           height={100}
-                           alt="Picture of the author"
-                        
-                        />
-                  </div>
-                  <div className="w-22 h-22 rounded-full]">
-                     <Image
-                           src="/img/logo/tailwind.png"
-                           width={100}
-                           height={100}
-                           alt="Picture of the author"
-                        
-                        />
-                  </div>
-                  <div className="w-22 h-22 rounded-full]">
-                     <Image
-                           src="/img/logo/figma.png"
-                           width={100}
-                           height={100}
-                           alt="Picture of the author"
-                        
-                        />
-                  </div>
-                  <div className="w-22 h-22 rounded-full">
-                     <Image
-                           src="/img/logo/ts.png"
-                           width={100}
-                           height={100}
-                           alt="Picture of the author"
-                        
-                        />
-                  </div>
-                  <div className="w-22 h-22 rounded-full">
+                      src="/img/logo/github.png"
+                      width={95}
+                      height={95}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
                   <Image
-                        src="/img/logo/css.png"
-                        width={100}
-                        height={100}
-                        alt="Picture of the author"
-                     
-                     />
-                  </div>
-                  <div className="w-22 h-22 rounded-full]">
-                     <Image
-                           src="/img/logo/redux.png"
-                           width={100}
-                           height={100}
-                           alt="Picture of the author"
-                        
-                        />
-                  </div> 
-                  <div className="w-22 h-22 rounded-full]">
-                     <Image
-                           src="/img/logo/bootstrap.png"
-                           width={100}
-                           height={100}
-                           alt="Picture of the author"
-                        
-                        />
-                  </div>
-        </div>
+                      src="/img/logo/next.png"
+                      width={95}
+                      height={95}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full]">
+                  <Image
+                      src="/img/logo/html.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full]">
+                  <Image
+                      src="/img/logo/jquery.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
+                  <Image
+                      src="/img/logo/js.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
+                  <Image
+                      src="/img/logo/vue.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
+                  <Image
+                      src="/img/logo/pwa.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
+                  <Image
+                      src="/img/logo/ws.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
+                  <Image
+                      src="/img/logo/postman.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
+                  <Image
+                      src="/img/logo/react.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full]">
+                  <Image
+                      src="/img/logo/tailwind.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full]">
+                  <Image
+                      src="/img/logo/figma.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
+                  <Image
+                      src="/img/logo/ill.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
+                  <Image
+                      src="/img/logo/ts.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
+                  <Image
+                      src="/img/logo/css.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full">
+                  <Image
+                      src="/img/logo/wordpress.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full]">
+                  <Image
+                      src="/img/logo/redux.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+              <div className="w-22 h-22 rounded-full]">
+                  <Image
+                      src="/img/logo/bootstrap.png"
+                      width={100}
+                      height={100}
+                      alt="Picture of the author"
+
+                  />
+              </div>
+          </div>
       </div>
-      
+
     </>
   );
 };
 
 export default Skills;
-
-
-
-
-
-
 
 
 // const [skills, setSkills] = useState<Skills[]>([])
