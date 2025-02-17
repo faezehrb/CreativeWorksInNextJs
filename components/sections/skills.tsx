@@ -37,7 +37,7 @@ const Skills = () => {
 
       const animations = [];
 
-      for (let i = 0; i < 12; i++) {
+      for (let i = 0; i < 18; i++) {
         animations.push({
           x: Math.random() * 4 - 2,
           y: Math.random() * 4 - 2,
@@ -193,7 +193,7 @@ const Skills = () => {
               </div>
               <div className="w-22 h-22 rounded-full">
                   <Image
-                      src="/img/logo/ill.png"
+                      src="/img/logo/bootstrap.png"
                       width={100}
                       height={100}
                       alt="Picture of the author"
@@ -238,7 +238,7 @@ const Skills = () => {
               </div>
               <div className="w-22 h-22 rounded-full]">
                   <Image
-                      src="/img/logo/bootstrap.png"
+                      src="/img/logo/restapi.png"
                       width={100}
                       height={100}
                       alt="Picture of the author"
